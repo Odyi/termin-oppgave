@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erikstadkommune vote</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <!-- Entrance Page -->
+    <div class="entrance-container">
+        <h1>Welcome to Erikstadkommune vote</h1>
+        <div class="entrance-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <label for="contactInfo">Contact Info:</label>
+            <input type="text" id="contactInfo" required>
+            <button type="button" onclick="proceedToVote()">Proceed to Vote</button>
+        </div>
+    </div>
+
+    <!-- Vote Page -->
+    <div id="votePage" style="display: none;">
+        <h1>Erikstadkommune voting</h1>
+
+        <div id="chartContainer">
+            <canvas id="chartCanvas" width="3000" height="300"></canvas>
+            <div id="animatedNumber" class="animated-number">0</div>
+        </div>
+
+        <button onclick="stemPåParti('PartiA')">FRP</button>
+        <button onclick="stemPåParti('PartiB')">MDG</button>
+        <button onclick="stemPåParti('PartiC')">AP</button>
+        <button onclick="stemPåParti('PartiD')">SP</button>
+        <button onclick="stemPåParti('PartiE')">HØYRE</button>
+
+        <script src="/javascript/javascript.js"></script>
+    </div>
+<div class="cool-button-place">
+    <!-- Animated Button to go to Party Explanation Page -->
+    <button onclick="goToPartyPage()" class="cool-button">Learn more about parties</button>
+</div>
+    <script>
+        function goToPartyPage() {
+            window.location.href = "parties.html";
+        }
+    </script>
+
+</body>
+</html>
